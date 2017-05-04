@@ -5,8 +5,9 @@ Created on Apr 28, 2017
 '''
 # encoding: utf-8
 
-from ui.pageobject.login import Login as LoginPageElements
 from common.wrapdrivermethod.controlmethod import ControlMethod
+from ui.pageobject.login import Login as LoginPageElements
+
 
 class LoginFlow():
     

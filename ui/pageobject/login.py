@@ -6,6 +6,7 @@ Created on Apr 28, 2017
 # encoding: utf-8
 from selenium.webdriver.common.by import By
 
+
 class Login():
     
     @property
