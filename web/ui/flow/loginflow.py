@@ -13,8 +13,8 @@ class LoginFlow():
     
     def __init__(self, driver, checkURL = False):
         #configuration
-        self.username = "username" 
-        self.password = "password"
+        self.username = "kongtao@beyondsoft.com" 
+        self.password = "Kt123456"
         self.elements = LoginPageElements()
         self.controlMethod = ControlMethod(driver)
         self.onPageLoad(checkURL)
@@ -23,6 +23,7 @@ class LoginFlow():
         pass
             
     def login(self):
+        self.controlMethod.click(self.elements.homePageLogInButton)
         self.controlMethod.click(self.elements.signInButton)
         self.controlMethod.sendKeys(self.username, self.elements.userNameTextBox)
         self.controlMethod.sendKeys(self.username, self.elements.passwordTextBox)

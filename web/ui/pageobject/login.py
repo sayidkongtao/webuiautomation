@@ -11,15 +11,15 @@ class Login():
     
     @property
     def userNameTextBox(self):
-        return (By.CSS_SELECTOR, "form.js-sign-in-form input(name=email)")
+        return (By.CSS_SELECTOR, "input.ng-valid-email")
     
     @property
     def passwordTextBox(self):
-        return (By.CSS_SELECTOR, "form.js-sign-in-form input(name=password)")
+        return (By.XPATH, "//input[contains(@name, 'password')]")
     
     @property
     def signInButton(self):
-        return (By.CSS_SELECTOR, "form.js-sign-in-form input.btn-primary")
+        return (By.XPATH, "//input[contains(@class, 'btn btn-primary js-loader')]")
     
     @property
     def homePageLogInButton(self):
@@ -32,5 +32,4 @@ class Login():
     @property
     def acceptAgreementButton(self):
         return (By.LINK_TEXT, "I Accept These Agreements")
-    
     
