@@ -16,6 +16,6 @@ class InitializeBrowser():
         # currently firefox is default
         self.driver = webdriver.Firefox(executable_path=PATH(r"../../source/webdriver/firefox/geckodriver.exe"))
         # self.browser.implicitly_wait(timeout);
-        self.driver.get('https://cloud-hoth.illumina.com')
+        self.driver.get('')
         # to do create a configuration  profile and so on 
         # self.driver.find_element(by, value)
