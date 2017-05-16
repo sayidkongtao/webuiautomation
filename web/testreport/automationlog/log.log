@@ -1,0 +1,17 @@
+2017-05-16 17:26:49,177-root-initializebrowser-18 -INFO-init web driver 
+2017-05-16 17:27:08,130-root-loginflow-26 -INFO-Click Login Button on Home screen 
+2017-05-16 17:28:39,028-root-initializebrowser-18 -INFO-init web driver 
+2017-05-16 17:28:53,884-root-loginflow-26 -INFO-Click Login Button on Home screen 
+2017-05-16 17:30:01,240-root-initializebrowser-18 -INFO-init web driver 
+2017-05-16 17:30:17,667-root-loginflow-26 -INFO-Click Login Button on Home screen 
+2017-05-16 17:30:44,135-root-initializebrowser-18 -INFO-init web driver 
+2017-05-16 17:30:59,063-root-loginflow-26 -INFO-Click Login Button on Home screen 
+2017-05-16 17:30:59,065-root-controlmethod-24 -INFO-Click: ('id', 'sign-in-btn') 
+2017-05-16 17:30:59,141-root-loginflow-28 -INFO-Click Login sign in button on login screen 
+2017-05-16 17:30:59,142-root-controlmethod-24 -INFO-Click: ('xpath', "//input[contains(@class, 'btn btn-primary js-loader')]") 
+2017-05-16 17:31:07,154-root-loginflow-30 -INFO-Input uername 
+2017-05-16 17:31:07,154-root-controlmethod-30 -INFO-Input: kongtao01@beyondsoft.com__('css selector', 'input.ng-valid-email') 
+2017-05-16 17:31:07,345-root-loginflow-32 -INFO-Input password 
+2017-05-16 17:31:07,345-root-controlmethod-30 -INFO-Input: kongtao01@beyondsoft.com__('xpath', "//input[contains(@name, 'password')]") 
+2017-05-16 17:31:07,443-root-loginflow-34 -INFO-Click the signin 
+2017-05-16 17:31:07,443-root-controlmethod-24 -INFO-Click: ('xpath', "//input[contains(@class, 'btn btn-primary js-loader')]") 
