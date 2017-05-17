@@ -7,31 +7,34 @@ Created on Apr 28, 2017
 from web.common.utility.automationlogger import autoLog
 from web.common.wrapdrivermethod.controlmethod import ControlMethod
 from web.ui.pageobject.login import Login as LoginPageElements
-
+from web.ui.flow.dashboardflow import DashboardFlow
 
 class LoginFlow():
     
     def __init__(self, driver, checkURL = False):
         #configuration
-        self.username = "" 
-        self.password = ""
-        self.elements = LoginPageElements()
-        self.controlMethod = ControlMethod(driver)
-        self.onPageLoad(checkURL)
+        self.__driver = driver
+        self.__username = "kongtao01@beyondsoft.com" 
+        self.__password = "Kt123456"
+        self.__elements = LoginPageElements()
+        self.__controlMethod = ControlMethod(driver)
+        self.__onPageLoad(checkURL)
     
-    def onPageLoad(self, checkURL = False):
+    def __onPageLoad(self, checkURL = False):
         pass
             
     def login(self):
         autoLog.info("Click Login Button on Home screen")
-        self.controlMethod.click(self.elements.homePageLogInButton)
+        self.__controlMethod.click(self.__elements.homePageLogInButton)
         autoLog.info("Click Login sign in button on login screen")
-        self.controlMethod.click(self.elements.signInButton)
+        self.__controlMethod.click(self.__elements.signInButton)
         autoLog.info("Input uername")
-        self.controlMethod.sendKeys(self.username, self.elements.userNameTextBox)
+        self.__controlMethod.sendKeys(self.__username, self.__elements.userNameTextBox)
         autoLog.info("Input password")
-        self.controlMethod.sendKeys(self.password, self.elements.passwordTextBox)
+        self.__controlMethod.sendKeys(self.__password, self.__elements.passwordTextBox)
         autoLog.info("Click the signin")
-        self.controlMethod.click(self.elements.signInButton)
-        return 
+        self.__controlMethod.click(self.__elements.signInButton)
+        
+        autoLog.info("Get Dashboard flow")
+        return DashboardFlow(self.__driver)
     

@@ -18,4 +18,4 @@ class MenuBar():
     
     @property
     def runs(self):
-        return (By.CSS_SELECTOR, "a[ng-href='/runs']")
+        return (By.CSS_SELECTOR, "#navbar-menu-ul > li:nth-child(3) > a:nth-child(1)")

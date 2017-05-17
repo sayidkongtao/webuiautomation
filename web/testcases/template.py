@@ -12,4 +12,6 @@ class LoginTest(BaseTest):
     
     def test_Login(self):
         loginFlow = LoginFlow(self.initializebrowser.driver)
-        loginFlow.login()
+        dsFlow = loginFlow.login()
+        runListFlow = dsFlow.menuBar.navigateToRunList()
+        print runListFlow.getRunStatusByRunName("HiSeq_WG")
