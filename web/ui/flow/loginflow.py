@@ -30,7 +30,7 @@ class LoginFlow():
         autoLog.info("Input uername")
         self.controlMethod.sendKeys(self.username, self.elements.userNameTextBox)
         autoLog.info("Input password")
-        self.controlMethod.sendKeys(self.username, self.elements.passwordTextBox)
+        self.controlMethod.sendKeys(self.password, self.elements.passwordTextBox)
         autoLog.info("Click the signin")
         self.controlMethod.click(self.elements.signInButton)
         return 
