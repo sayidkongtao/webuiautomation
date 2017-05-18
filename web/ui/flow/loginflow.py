@@ -11,27 +11,25 @@ from web.ui.flow.dashboardflow import DashboardFlow
 
 class LoginFlow():
     
-    def __init__(self, driver, checkURL = False):
-        #configuration
+    def __init__(self, driver, checkURL=False):
+        # configuration
         self.__driver = driver
-        self.__username = "kongtao01@beyondsoft.com" 
-        self.__password = "Kt123456"
         self.__elements = LoginPageElements()
         self.__controlMethod = ControlMethod(driver)
         self.__onPageLoad(checkURL)
     
-    def __onPageLoad(self, checkURL = False):
+    def __onPageLoad(self, checkURL=False):
         pass
             
-    def login(self):
+    def login(self, username, passwd):
         autoLog.info("Click Login Button on Home screen")
         self.__controlMethod.click(self.__elements.homePageLogInButton)
         autoLog.info("Click Login sign in button on login screen")
         self.__controlMethod.click(self.__elements.signInButton)
         autoLog.info("Input uername")
-        self.__controlMethod.sendKeys(self.__username, self.__elements.userNameTextBox)
+        self.__controlMethod.sendKeys(username, self.__elements.userNameTextBox)
         autoLog.info("Input password")
-        self.__controlMethod.sendKeys(self.__password, self.__elements.passwordTextBox)
+        self.__controlMethod.sendKeys(passwd, self.__elements.passwordTextBox)
         autoLog.info("Click the signin")
         self.__controlMethod.click(self.__elements.signInButton)
         

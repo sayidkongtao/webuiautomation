@@ -22,5 +22,5 @@ class RunListFlow():
         
     def getRunStatusByRunName(self, runName):
         autoLog.info("Get status of run: " + runName)
-        return self.__controlMethod.getText(self.__elements.runStatus(runName))
+        return self.__controlMethod.getText(self.__elements.runStatus(runName),timeout= 60)
         
